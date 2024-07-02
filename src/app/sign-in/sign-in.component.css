@@ -1,0 +1,65 @@
+body {
+  max-width: 500px; 
+  height: 1400px; 
+  margin: 0 auto; 
+}
+/*style includs all the elements */
+.content {
+  margin: 0 auto; 
+  width: 100%; 
+}
+/*styling card1+card2 */
+.element {
+  display: flex;
+  justify-content: space-evenly; 
+  gap: 10px; 
+  margin-top: 20px;
+  align-items: center; 
+  margin-left: 200px;
+  margin-right: 200px;
+  transition: .4s;
+
+}
+/*button of inscription big size*/
+.buttonInscription {
+  height: 80px;
+}
+/* the card of the form*/
+.card1{
+  transition: .4s;
+  border-radius: 20px;
+
+}
+/* the card of the inscription button*/
+
+.card2 {
+  flex-basis: 20%; 
+  transition: .4s;
+  border-radius: 20px;
+
+
+}
+/* the card of the photo in the top*/
+
+.card3 {
+  margin-top: 20px;
+  flex-basis: 80%;
+  justify-content: center;
+  align-items: center;
+  margin-left: 340px;
+  margin-right: 340px;
+  transition: .4s;
+  border-radius: 20px;
+
+
+    
+  
+}
+/*the hover of the 3 elements*/
+.card1:hover,
+.card2:hover,
+.card3:hover
+{
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+      transform: translate(0px,-8px);
+}

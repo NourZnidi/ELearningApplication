@@ -1,0 +1,96 @@
+<div class="content w-full max-w-4xl mt-8 mb-8 p-4 mx-auto bg-white border border-gray-200 rounded-lg shadow sm:p-6 md:p-8 dark:bg-gray-800 dark:border-gray-700">
+    <h2 class="text-4xl font-bold mb-4 dark:text-white">Candidature au Mastère</h2>
+    <!--Formulaire  -->
+  <form class="space-y-6" action="#">
+    <div class="flex gap-4">
+          <!-- premiere partie de photo jusqu'a date de naissance -->
+            <div class="w-1/2 space-y-6">
+              <!-- photo -->
+              <div>
+                <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white" for="user_avatar"><i class="fa-solid fa-file"></i> Photo</label>
+                <input class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400" aria-describedby="user_avatar_help" id="user_avatar" type="file">
+              </div>
+              <!-- cin -->
+              <div>
+                  <label for="cin" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"><i class="fa-solid fa-address-card"></i> cin</label>
+                  <input type="text" name="cin" id="cin" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" placeholder="cin"  required/>
+              </div>
+              <!-- nom et prenom en francais -->
+              <h6 class="text-2xl font-bold mb-2 dark:text-white">Nom & Prénom en francais</h6>
+              <!-- div pour divier l'input sur deux l'input de nom et de prenom = 1/2 input normale -->
+                    <div style="display: flex; gap: 10px; align-items: center;">
+                      <!-- nom -->
+                        <div style="flex:1;">
+                            <label for="nom" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"><i class="fa-solid fa-user"></i> nom</label>
+                            <input type="text" name="nom" id="nom" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" placeholder="nom"  required/>
+                        </div>
+                        <!-- prenom -->
+                        <div style="flex: 1;">
+                            <label for="prenom" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"><i class="fa-solid fa-user"></i> prenom</label>
+                            <input type="text" name="prenom" id="prenom" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" placeholder="prenom" required />
+                        </div>
+                    </div>
+                      <!-- nom et prenom en arabe -->
+            <h6 class="text-2xl font-bold mb-2 dark:text-white">الاسم و اللقب باللغة العربية</h6>
+              <!-- div pour divier l'input sur deux l'input de nom et de prenom = 1/2 input normale -->
+                    <div style="display: flex; gap: 10px; align-items: center;">
+                      <!-- nom en arabe -->
+                        <div style="flex:1;">
+                            <label for="nom" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"><i class="fa-solid fa-user"></i> اللقب</label>
+                            <input type="text" name="nom" id="nom" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" placeholder="اللقب" required />
+                        </div>
+                      <!-- prenom en arabe -->
+                        <div style="flex: 1;">
+                            <label for="prenom" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"><i class="fa-solid fa-user"></i> الاسم</label>
+                            <input type="text" name="prenom" id="prenom" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" placeholder="الاسم" required />
+                        </div>
+                    </div>
+                      <!-- date de naissance -->
+                <div>
+                  <label for="datenaissance" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"><i class="fa-regular fa-calendar-days"></i> date de naissance</label>
+                  <input type="date" name="datenaissance" id="datenaissance" placeholder="" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"  required/>
+                </div>
+            </div>
+
+          <!-- deuxieme partie le reste  -->
+      <div class="w-1/2 space-y-6">
+      <!-- lieu de naissance -->
+                <div>
+                  <label for="lieunaissance" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"><i class="fa-solid fa-location-dot"></i> Lieu de naissance</label>
+                  <input type="text" name="lieunaissance" id="lieunaissance" placeholder="" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"  required/>
+                </div>
+      <!-- adresse -->
+                <div>
+                  <label for="adresse" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"><i class="fa-solid fa-location-dot"></i> Adresse</label>
+                  <input type="text" name="adresse" id="adresse" placeholder="" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"  required/>
+                </div>
+      <!-- email -->
+                <div>
+                  <label for="emailAdresse" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"><i class="fa-solid fa-envelope"></i> Email</label>
+                  <input type="email" name="emailAdresse" id="emailAdresse" placeholder="example@gmail.com" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" required />
+                </div>
+
+                <!-- telephone -->
+                <div>
+                  <label for="telephone" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"><i class="fa-solid fa-phone"></i> Téléphone</label>
+                  <input type="number" name="telephone" id="telephone" placeholder="" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" required />
+                </div>
+      <!-- the authentification with cin and password -->
+      <h6 class="text-2xl text-red-700 font-bold mb-2 dark:text-white">Paramètres de votre compte</h6>
+                <div style="display: flex; gap: 10px; align-items: center;">
+                <!-- cin -->
+                        <div style="flex: 1;">
+                            <label for="login" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"><i class="fa-solid fa-barcode"></i> Login (CIN)</label>
+                            <input type="text" name="login" id="login" placeholder="login" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"  required/>
+                        </div>
+                <!-- password -->
+                        <div style="flex: 1;">
+                            <label for="password" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"><i class="fa-solid fa-lock"></i> Mot de passe</label>
+                            <input type="password" name="password" id="password" placeholder="••••••••" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" required />
+                        </div>
+                </div>
+                <button type="submit" class="w-full text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"><a href="/home">S'identifier</a></button>
+      </div>
+    </div>
+  </form>
+</div>

@@ -1,0 +1,9 @@
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000; /* Assure que le footer est au-dessus du reste du contenu */
+  background-color: #ffffff; /* Couleur de fond du footer */
+  border-top: 1px solid #e2e8f0; /* Bordure supérieure */
+}

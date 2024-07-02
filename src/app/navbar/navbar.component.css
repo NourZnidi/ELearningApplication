@@ -1,0 +1,14 @@
+#navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000; /* Assure que le navbar est au-dessus du reste du contenu */
+  background-color: #ffffff; /* Couleur de fond du navbar */
+  border-bottom: 1px solid #e2e8f0; /* Bordure inférieure */
+}
+.main-content {
+  padding-top: 64px; /* Ajuster en fonction de la hauteur du navbar */
+  padding-bottom: 64px; /* Ajuster en fonction de la hauteur du footer */
+  /* Autres styles pour le contenu principal */
+}

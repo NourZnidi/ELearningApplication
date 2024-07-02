@@ -1,0 +1,122 @@
+<app-navbar></app-navbar>
+
+
+<router-outlet>
+
+  <a href="ss" class="block max-w-8xl mt-20 mx-2 p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
+    <h5 class="text-xl mb-4 font-medium text-gray-900 dark:text-white"><i class="fa-solid fa-book-bookmark"></i>  Votre candidature a été déposée .</h5>
+    <p class="font-normal text-gray-700 dark:text-gray-400"> Droit privé .</p>
+    <p class="font-normal text-red-700 dark:text-red-400"> Télecharger le formulaire d'inscription .</p>
+  
+  </a>
+
+  <a href="" class="block max-w-8xl mt-4 mx-2 p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
+    <h6 class="text-xl mb-4 font-medium text-gray-900 dark:text-white"><i class="fa-solid fa-exclamation"></i> Reste</h6>
+    <p class="font-normal text-gray-700 dark:text-gray-400"> Votre candidature a été enrgistré . Vous recevez à partir du 24 aout votre score par mail . </p>
+  </a>
+  <div style="display: flex; justify-content: space-between;text-align: center;" class="block max-w-10xl mt-4 mx-2 p-3 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
+    <a href="/home" class="block max-w-4xl mx-2 p-3 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700" style="flex: 1;">
+      <h6 class="text-xl mb-2 font-medium text-gray-900 dark:text-white"><i class="fa-solid fa-id-card"></i> Profil d'inscription</h6>
+    </a>
+    <a href="/moyennebac" class="block max-w-4xl mx-2 p-3 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700" style="flex: 1;">
+    <h6 class="text-xl mb-2 font-medium text-gray-900 dark:text-white"><i class="fa-solid fa-calculator"></i> 2 : Moyenne du bac</h6>
+    </a>
+    <a href="/curus" class="block max-w-4xl mx-2 p-3 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700" style="flex: 1;">
+      <h6 class="text-xl mb-2 font-medium text-gray-900 dark:text-white"><i class="fa-solid fa-list"></i> 3 : Cursus universitaire</h6>
+    </a>
+    <a href="/choix" class="block max-w-4xl mx-2 p-3 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700" style="flex: 1;">
+      <h6 class="text-xl mb-2 font-medium text-gray-900 dark:text-white"><i class="fa-solid fa-check"></i> 4 : Choix du mastère</h6>
+    </a>
+    <a href="/impression" class="block max-w-4xl mx-2 p-3 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700" style="flex: 1;">
+      <h6 class="text-xl mb-2 font-medium text-gray-900 dark:text-white"><i class="fa-solid fa-print"></i> Impression du profil d'inscription</h6>
+    </a>
+  
+</div>
+<div style="gap: 20px; display: flex;justify-content: center; " class="block max-w-8xl mb-20 mt-4 mx-2 p-4 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
+  <div class="w-full max-w-8xl p-3  bg-white border border-gray-200 rounded-lg shadow sm:p-6 md:p-8 dark:bg-gray-800 dark:border-gray-700">
+    <div class="relative overflow-x-auto">
+      <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
+          <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+              <tr>
+                  <th scope="col" class="px-6 py-3">
+                    Mastére
+                  </th>
+                  <th scope="col" class="px-6 py-3">
+                      Action
+                  </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                  <th style="width: 100%;" scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                    Mastere professionnel en droits humains et droit international humanitaire
+                  </th>
+                  <td class="px-6 py-4">
+                    <button type="button" class="focus:outline-none text-white bg-orange-400 hover:bg-orange-500 focus:ring-4 focus:ring-orange-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:focus:ring-orange-900">Choisir</button>
+                  </td>
+              </tr>
+              <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                <th style="width: 100%;"  scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                  Droit Privé
+                </th>
+                <td class="px-6 py-4">
+                  <button type="button" class="focus:outline-none text-white bg-orange-400 hover:bg-orange-500 focus:ring-4 focus:ring-orange-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:focus:ring-orange-900">Choisir</button>
+                </td>
+            </tr>
+
+            <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+              <th style="width: 100%;" scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                Droit Public
+              </th>
+              <td class="px-6 py-4">
+                <button type="button" class="focus:outline-none text-white bg-orange-400 hover:bg-orange-500 focus:ring-4 focus:ring-orange-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:focus:ring-orange-900">Choisir</button>
+              </td>
+          </tr>
+          <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+            <th style="width: 100%;" scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+              Mastère professionnel Gouvernance de la commande publique
+            </th>
+            <td class="px-6 py-4">
+              <button type="button" class="focus:outline-none text-white bg-orange-400 hover:bg-orange-500 focus:ring-4 focus:ring-orange-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:focus:ring-orange-900">Choisir</button>
+            </td>
+        </tr>
+        <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+          <th style="width: 100%;" scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+            Mastère de recherche en droit des affaires
+          </th>
+          <td class="px-6 py-4">
+            <button type="button" class="focus:outline-none text-white bg-orange-400 hover:bg-orange-500 focus:ring-4 focus:ring-orange-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:focus:ring-orange-900">Choisir</button>
+          </td>
+      </tr>
+      <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+        <th style="width: 100%;" scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+          Mastere de recherche en Common Law
+        </th>
+        <td class="px-6 py-4">
+          <button type="button" class="focus:outline-none text-white bg-orange-400 hover:bg-orange-500 focus:ring-4 focus:ring-orange-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:focus:ring-orange-900">Choisir</button>
+        </td>
+    </tr>
+    <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+      <th style="width: 100%;" scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+        Mastère professionnel Droit des affaires et de la propriété intellectuelle
+      </th>
+      <td class="px-6 py-4">
+        <button type="button" class="focus:outline-none text-white bg-orange-400 hover:bg-orange-500 focus:ring-4 focus:ring-orange-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:focus:ring-orange-900">Choisir</button>
+      </td>
+  </tr>
+            </tbody>
+      </table>
+    </div>
+
+
+  </div>
+</div>
+
+    
+
+
+  
+</router-outlet>
+
+
+<app-footer></app-footer>
