@@ -4,10 +4,6 @@ body {
   margin: 0 auto; 
 }
 /*style includs all the elements */
-.content {
-  margin: 0 auto; 
-  width: 100%; 
-}
 /*styling card1+card2 */
 .element {
   display: flex;
@@ -28,7 +24,12 @@ body {
 .card1{
   transition: .4s;
   border-radius: 20px;
+  backdrop-filter: blur(2px);
 
+
+}
+.blur-background {
+  backdrop-filter: blur(2px);
 }
 /* the card of the inscription button*/
 
@@ -50,10 +51,6 @@ body {
   margin-right: 340px;
   transition: .4s;
   border-radius: 20px;
-
-
-    
-  
 }
 /*the hover of the 3 elements*/
 .card1:hover,
