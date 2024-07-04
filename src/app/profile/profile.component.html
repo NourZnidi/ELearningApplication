@@ -1,0 +1,90 @@
+<div style="gap: 20px; display: flex;" class="block max-w-10xl mb-20 mt-4 mx-2 p-4 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
+  <!--les donnees d'insription-->
+      <div class="w-full max-w-8xl p-3  bg-white border border-gray-200 rounded-lg shadow sm:p-6 md:p-8 dark:bg-gray-800 dark:border-gray-700">
+        <h5 class=" text-xl font-medium text-gray-900 dark:text-white">Donnees d'inscription</h5>
+          <!-- div pour les elements de donnes d'inscription display flex pour ces deux elements -->
+          <div style="gap: 20px; display: flex;  " class="w-full max-w-8xl p-3 ">
+              <!-- l'image -->
+              <div class="image">
+                <img class="mt-2 w-20 h-25 " src="https://cdn1.iconfinder.com/data/icons/user-pictures/101/malecostume-512.png" alt="user photo"/>
+              </div>
+            <!--liste des informations user-->
+              <div style="flex: 1 30px; " class="tableau mt-2 mx-14">
+                <div class="relative overflow-x-auto">
+                  <table >
+                    <tbody>
+                      <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                                    Nom & Prenom (FR)
+                                </th>
+                                <td class="px-6 py-4">
+                                    Ali Bilel
+                                </td>
+                      </tr>
+                      <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                                    Nom & Prenom (AR)
+                                </th>
+                                <td class="px-6 py-4">
+                                  علي بلال
+                                </td>
+                      </tr>
+                      <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                            <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                                CIN
+                            </th>
+                            <td class="px-6 py-4">
+                              11253695
+                            </td>
+                      </tr>
+                      <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                          <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                              Date de naissance
+                          </th>
+                          <td class="px-6 py-4">
+                            2000-05-20
+                          </td>
+                      </tr>
+                      <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                          <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                              Lieu de naissance
+                          </th>
+                          <td class="px-6 py-4">
+                            Tunis
+                          </td>
+                      </tr>
+                      <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                          <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                              Adresse
+                          </th>
+                          <td class="px-6 py-4">
+                            Route gremda 10 km
+                          </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+          </div>
+      </div>
+  <!--les etapes d'inscription-->
+  <div class="w-full max-w-8xl p-3 bg-white border border-gray-200 rounded-lg shadow sm:p-6 md:p-8 dark:bg-gray-800 dark:border-gray-700">
+    <h5 class="text-xl font-medium text-gray-900 dark:text-white">Les Étapes d'inscription</h5>
+    <h6 class="text-md mt-2 mb-2 font-medium text-gray-900 dark:text-white">Après inscription vous devez suivre les étapes suivantes afin d'obtenir votre score :</h6>
+      <div class="buttons flex flex-col mt-4 ">
+        <button type="button" style="text-align: start; width: 50%;" class="focus:outline-none text-white bg-red-700 hover:bg-red-800 focus:ring-4 focus:ring-red-300 font-medium rounded-lg text-sm px-5 py-2.5 mb-2 dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-900" [routerLink]="['/home/moyennebac']">
+          <i class="fa-solid fa-hand-point-right"></i> 1 : Saisir la moyenne du baccalauréat
+        </button>
+        <button type="button" style="text-align: start;width: 50%"  class="focus:outline-none text-white bg-red-700 hover:bg-red-800 focus:ring-4 focus:ring-red-300 font-medium rounded-lg text-sm px-5 py-2.5 mb-2 dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-900" [routerLink]="['/home/curus']">
+          <i class="fa-solid fa-hand-point-right"></i> 2 : Saisir le cursus universitaire
+        </button>
+        <button type="button" style="text-align: start; width: 50%" class="focus:outline-none text-white bg-red-700 hover:bg-red-800 focus:ring-4 focus:ring-red-300 font-medium rounded-lg text-sm px-5 py-2.5 mb-2 dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-900" [routerLink]="['/home/choix']">
+          <i class="fa-solid fa-hand-point-right"></i> 3 : Choisir le master
+        </button>
+        <button type="button" style="text-align: start;width: 50%" class="focus:outline-none text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 mb-2 dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-900" [routerLink]="['/home/impression']" >
+          <i class="fa-solid fa-hand-point-right"></i> 4: Impression du profil d'inscription
+        </button>
+      </div>
+  </div>
+  
+</div>

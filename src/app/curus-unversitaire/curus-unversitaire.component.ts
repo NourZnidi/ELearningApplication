@@ -1,14 +1,11 @@
-import { Component } from '@angular/core';
-import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
-import { HomeComponent } from '../home/home.component';
-import { FooterComponent } from '../footer/footer.component';
-import { NavbarComponent } from '../navbar/navbar.component';
 import { CommonModule } from '@angular/common';
+import { Component } from '@angular/core';
+import { RouterLink, RouterLinkActive } from '@angular/router';
 
 @Component({
   selector: 'app-curus-unversitaire',
   standalone: true,
-  imports: [CommonModule,RouterLink,RouterLinkActive,HomeComponent,FooterComponent,NavbarComponent,RouterOutlet],
+  imports: [CommonModule,RouterLink,RouterLinkActive],
   templateUrl: './curus-unversitaire.component.html',
   styleUrl: './curus-unversitaire.component.css'
 })

@@ -10,11 +10,13 @@ import { MoyenneBacComponent } from './moyenne-bac/moyenne-bac.component';
 import { CurusUnversitaireComponent } from './curus-unversitaire/curus-unversitaire.component';
 import { ChoixMasterComponent } from './choix-master/choix-master.component';
 import { ImpressionProfileComponent } from './impression-profile/impression-profile.component';
+import { HttpClientModule } from '@angular/common/http';
+import { ProfileComponent } from './profile/profile.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [AppComponent,RouterLink,RouterLinkActive,CommonModule,RouterOutlet,HomeComponent,SignInComponent,SignUpComponent,MoyenneBacComponent,CurusUnversitaireComponent,ChoixMasterComponent,ImpressionProfileComponent],
+  imports: [HttpClientModule, AppComponent,RouterLink,RouterLinkActive,CommonModule,RouterOutlet,HomeComponent,SignInComponent,SignUpComponent,MoyenneBacComponent,CurusUnversitaireComponent,ChoixMasterComponent,ImpressionProfileComponent,ProfileComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })

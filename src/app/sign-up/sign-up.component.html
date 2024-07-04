@@ -1,33 +1,55 @@
 <div class="content w-full max-w-4xl mt-8 mb-8 p-4 mx-auto bg-white border border-gray-200 rounded-lg shadow sm:p-6 md:p-8 dark:bg-gray-800 dark:border-gray-700">
     <h2 class="text-4xl font-bold mb-4 dark:text-white">Candidature au Mastère</h2>
     <!--Formulaire  -->
-  <form class="space-y-6" action="#">
+  <form class="space-y-6" [formGroup]="signUpForm" (onSubmit)="onSubmit()">
     <div class="flex gap-4">
           <!-- premiere partie de photo jusqu'a date de naissance -->
             <div class="w-1/2 space-y-6">
               <!-- photo -->
               <div>
-                <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white" for="userPhoto"><i class="fa-solid fa-file"></i> Photo</label>
-                <input class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400" aria-describedby="user_avatar_help" id="userPhoto" type="file">
+                <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white" for="Photo"><i class="fa-solid fa-file"></i> Photo</label>
+                <input class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400" aria-describedby="user_avatar_help" id="Photo" type="file">
               </div>
               <!-- cin -->
               <div>
                   <label for="cin" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"><i class="fa-solid fa-address-card"></i> cin</label>
-                  <input type="text" name="cin" id="cin" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" placeholder="cin"  required/>
+                  <input formControlName="cin"
+                  [ngClass]="{ 'is-invalid': submitted && f['cin'].errors }" type="text" name="cin" id="cin" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" placeholder="cin"  required/>
+                  @if (submitted && f['cin'].errors) {
+                    <div class="invalid-feedback">
+                      @if (f['cin'].errors['required']) {
+                      <div>cin is required</div>
+                      }
+                    </div>
+                    }
               </div>
               <!-- nom et prenom en francais -->
               <h6 class="text-2xl font-bold mb-2 dark:text-white">Nom & Prénom en francais</h6>
               <!-- div pour divier l'input sur deux l'input de nom et de prenom = 1/2 input normale -->
                     <div style="display: flex; gap: 10px; align-items: center;">
                       <!-- nom -->
-                        <div style="flex:1;">
-                            <label for="nomF" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"><i class="fa-solid fa-user"></i> nom</label>
-                            <input type="text" name="nomF" id="nomF" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" placeholder="nom"  required/>
-                        </div>
+                          <div style="flex:1;">
+                            <label for="nomFr" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"><i class="fa-solid fa-user"></i> nom</label>
+                            <input type="text" [ngClass]="{'is-invalid': submitted && f['nomFr'].errors }" name="nomFr" id="nomFr" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" placeholder="nom"  required/>
+                        @if(submitted &&f['nomFr'].errors){
+                          <div class="invalid-feedback">
+                            @if(f['nomFr'].errors['required']){
+                              <div>nomFr is required</div>
+                            }
+                          </div>
+                        }
+                          </div>
                         <!-- prenom -->
                         <div style="flex: 1;">
-                            <label for="prenomF" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"><i class="fa-solid fa-user"></i> prenom</label>
-                            <input type="text" name="prenomF" id="prenomF" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" placeholder="prenom" required />
+                            <label for="prenomFr" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"><i class="fa-solid fa-user"></i> prenom</label>
+                            <input [ngClass]="{ 'is-invalid': submitted && f['prenomFr'].errors }" type="text" name="prenomFr" id="prenomFr" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" placeholder="prenom" required />
+                        @if(submitted && f['prenomFr'].errors){
+                          <div class="invalid-feedback">
+                            @if(f['prenomFr'].errors['required']){
+                              <div>prenomFr is required</div>
+                            }
+                          </div>
+                        }
                         </div>
                     </div>
                       <!-- nom et prenom en arabe -->
@@ -35,20 +57,41 @@
               <!-- div pour divier l'input sur deux l'input de nom et de prenom = 1/2 input normale -->
                     <div style="display: flex; gap: 10px; align-items: center;">
                       <!-- nom en arabe -->
-                        <div style="flex:1;">
-                            <label for="nomA" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"><i class="fa-solid fa-user"></i> اللقب</label>
-                            <input type="text" name="nomA" id="nomA" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" placeholder="اللقب" required />
-                        </div>
+                          <div style="flex:1;">
+                            <label for="nomAr" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"><i class="fa-solid fa-user"></i> اللقب</label>
+                            <input [ngClass]="{ 'is-invalid': submitted && f['nomAr'].errors }" type="text" name="nomAr" id="nomAr" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" placeholder="اللقب" required />
+                        @if(submitted && f['nomAr'].errors){
+                          <div class="invalid-feedback">
+                            @if(f['nomAr'].errors['required']){
+                              <div>nomAr is required</div>
+                            }
+                          </div>
+                        }
+                          </div>
                       <!-- prenom en arabe -->
-                        <div style="flex: 1;">
-                            <label for="prenomA" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"><i class="fa-solid fa-user"></i> الاسم</label>
-                            <input type="text" name="prenomA" id="prenomA" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" placeholder="الاسم" required />
-                        </div>
+                          <div style="flex: 1;">
+                            <label for="prenomAr" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"><i class="fa-solid fa-user"></i> الاسم</label>
+                            <input [ngClass]="{ 'is-invalid': submitted && f['nomAr'].errors }" type="text" name="prenomAr" id="prenomAr" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" placeholder="الاسم" required />
+                        @if(submitted && f['prenomAr'].errors){
+                          <div class="invalid-feedback">
+                              @if(f['prenomAr'].errors['required']){
+                                <div>prenomAr is required</div>
+                              }
+                          </div>
+                        }
+                          </div>
                     </div>
                       <!-- date de naissance -->
                 <div>
-                  <label for="datenaissance" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"><i class="fa-regular fa-calendar-days"></i> date de naissance</label>
-                  <input type="date" name="datenaissance" id="datenaissance" placeholder="" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"  required/>
+                  <label for="dateNaissance" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"><i class="fa-regular fa-calendar-days"></i> date de naissance</label>
+                  <input [ngClass]="{ 'is-invalid': submitted && f['dateNaissance'].errors }" type="date" name="dateNaissance" id="dateNaissance" placeholder="" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"  required/>
+                  @if(submitted && f['dateNaissance'].errors){
+                    <div class="invalid-feedback">
+                      @if(f['dateNaissance'].errors['required']){
+                        <div>date naissance is required</div>
+                      }
+                    </div>
+                  }
                 </div>
             </div>
 
@@ -56,24 +99,53 @@
       <div class="w-1/2 space-y-6">
       <!-- lieu de naissance -->
                 <div>
-                  <label for="lieunaissance" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"><i class="fa-solid fa-location-dot"></i> Lieu de naissance</label>
-                  <input type="text" name="lieunaissance" id="lieunaissance" placeholder="" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"  required/>
+                  <label for="lieuNaissance" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"><i class="fa-solid fa-location-dot"></i> Lieu de naissance</label>
+                  <input [ngClass]="{ 'is-invalid': submitted && f['lieuNaissance'].errors }" type="text" name="lieuNaissance" id="lieuNaissance" placeholder="" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"  required/>
+                @if(submitted && f['lieuNaissance'].errors){
+                  <div class="invalid-feedback">
+
+                    @if(f['lieuNaissance'].errors['required']){
+                      <div>lieu naissance is required </div>
+                    }
+                  </div>
+                }
                 </div>
       <!-- adresse -->
                 <div>
                   <label for="adresse" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"><i class="fa-solid fa-location-dot"></i> Adresse</label>
-                  <input type="text" name="adresse" id="adresse" placeholder="" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"  required/>
+                  <input [ngClass]="{ 'is-invalid': submitted && f['adresse'].errors }" type="text" name="adresse" id="adresse" placeholder="" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"  required/>
+                @if(submitted && f['adresse'].errors){
+                  <div class="invalid-feedback">
+                    @if(f['adresse'].errors['required']){
+                      <div>adresse is required </div>
+                    }
+                  </div>
+                }
                 </div>
       <!-- email -->
                 <div>
-                  <label for="emailAdresse" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"><i class="fa-solid fa-envelope"></i> Email</label>
-                  <input type="email" name="emailAdresse" id="emailAdresse" placeholder="example@gmail.com" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" required />
+                  <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"><i class="fa-solid fa-envelope"></i> Email</label>
+                  <input [ngClass]="{ 'is-invalid': submitted && f['email'].errors }" type="email" name="email" id="email" placeholder="example@gmail.com" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" required />
+                @if(submitted && f['email'].errors){
+                  <div class="invalid-feedback">
+                    @if(f['email'].errors['required']){
+                      <div>email is required</div>
+                    }
+                  </div>
+                }
                 </div>
 
                 <!-- telephone -->
                 <div>
-                  <label for="telephone" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"><i class="fa-solid fa-phone"></i> Téléphone</label>
-                  <input type="number" name="telephone" id="telephone" placeholder="" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" required />
+                  <label for="tel" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"><i class="fa-solid fa-phone"></i> Téléphone</label>
+                  <input [ngClass]="{ 'is-invalid': submitted && f['tel'].errors }" type="number" name="tel" id="tel" placeholder="" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" required />
+                  @if(submitted && f['tel'].errors){
+                    <div class="invalid-feedback">
+                      @if(f['tel'].errors['required']){
+                        <div>telephone is required</div>
+                      }
+                    </div>
+                  }
                 </div>
       <!-- the authentification with cin and password -->
       <h6 class="text-2xl text-red-700 font-bold mb-2 dark:text-white">Paramètres de votre compte</h6>
@@ -89,7 +161,9 @@
                             <input type="password" name="password" id="password" placeholder="••••••••" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" required />
                         </div>
                 </div>
-                <button type="submit" class="w-full text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"><a href="/home">S'identifier</a></button>
+                <button type="Submit" class="w-full text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" [routerLink]="['/home']">
+                  <i class="fa-solid fa-unlock"></i> S'identifier
+                </button>
       </div>
     </div>
   </form>

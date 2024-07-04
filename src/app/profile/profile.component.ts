@@ -2,12 +2,12 @@ import { Component } from '@angular/core';
 import { RouterLink, RouterLinkActive } from '@angular/router';
 
 @Component({
-  selector: 'app-moyenne-bac',
+  selector: 'app-profile',
   standalone: true,
   imports: [RouterLink,RouterLinkActive],
-  templateUrl: './moyenne-bac.component.html',
-  styleUrl: './moyenne-bac.component.css'
+  templateUrl: './profile.component.html',
+  styleUrl: './profile.component.css'
 })
-export class MoyenneBacComponent {
+export class ProfileComponent {
 
 }
